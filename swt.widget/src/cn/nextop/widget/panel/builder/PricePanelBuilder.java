@@ -42,15 +42,15 @@ public class PricePanelBuilder {
 		theme.setEnterColor(color); return this;
 	}
 	
-	public PricePanelBuilder addControl(String text, Runnable action) {
-		final Control control = panel.getControl(); control.addWidget(text, action); return this;
-	}
-	
 	public PricePanelBuilder addSelectionListener1(Runnable r) {
 		this.panel.addSelectionListener1(r); return this;
 	}
 	
 	public PricePanelBuilder addSelectionListener2(Runnable r) {
 		this.panel.addSelectionListener2(r); return this;
+	}
+	
+	public PricePanelBuilder addControl(String text, Runnable action) {
+		final Control control = panel.getControl(); control.addWidget(text, action); return this;
 	}
 }
