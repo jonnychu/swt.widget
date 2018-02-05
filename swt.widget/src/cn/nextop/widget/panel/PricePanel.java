@@ -9,7 +9,6 @@ import org.eclipse.draw2d.MouseMotionListener;
 import org.eclipse.draw2d.TreeSearch;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.swt.widgets.Canvas;
-import org.eclipse.swt.widgets.Display;
 
 import cn.nextop.action.IReactor;
 import cn.nextop.action.actor.DefaultRector;
@@ -64,9 +63,6 @@ public class PricePanel extends AbstractWidget {
 	/**
 	 * 
 	 */
-	@Override 
-	public Display getDisplay() { return this.canvas.getDisplay(); }
-	
 	@Override
 	protected void layout() { super.layout(); reactor.submit(new LayoutAction()); }
 	
