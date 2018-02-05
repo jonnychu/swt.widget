@@ -1,13 +1,11 @@
 package cn.nextop.widget.vap;
 
-import org.eclipse.draw2d.Figure;
 import org.eclipse.swt.widgets.Canvas;
-import org.eclipse.swt.widgets.Display;
 
 import cn.nextop.action.IReactor;
-import cn.nextop.widget.IWidget;
+import cn.nextop.widget.AbstractWidget;
 
-public class VapPanel extends Figure implements IWidget {
+public class VapPanel extends AbstractWidget {
 	//
 	protected Canvas canvas;
 	protected IReactor reactor;
@@ -16,9 +14,7 @@ public class VapPanel extends Figure implements IWidget {
 	 * 
 	 */
 	public VapPanel(Canvas canvas) {
-		
+		super(canvas);
 	}
-	
-	public Display getDisplay() { return this.canvas.getDisplay(); }
 
 }

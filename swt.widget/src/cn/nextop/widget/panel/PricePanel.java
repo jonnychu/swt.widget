@@ -1,7 +1,6 @@
 package cn.nextop.widget.panel;
 
 import org.eclipse.draw2d.Cursors;
-import org.eclipse.draw2d.Figure;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MouseEvent;
@@ -14,7 +13,7 @@ import org.eclipse.swt.widgets.Display;
 
 import cn.nextop.action.IReactor;
 import cn.nextop.action.actor.DefaultRector;
-import cn.nextop.widget.IWidget;
+import cn.nextop.widget.AbstractWidget;
 import cn.nextop.widget.panel.action.LayoutAction;
 import cn.nextop.widget.panel.model.PricePanelModel;
 import cn.nextop.widget.panel.model.render.Control;
@@ -25,13 +24,12 @@ import cn.nextop.widget.panel.model.render.Spread;
 /**
  * @author jonny
  */
-public class PricePanel extends Figure implements IWidget {
+public class PricePanel extends AbstractWidget {
 	//
 	protected Spread s;
 	protected Control c;
 	protected PriceBid p1;
 	protected PriceAsk p2;
-	protected Canvas canvas;
 	protected IReactor reactor;
 	protected PricePanelModel model;
 	//
@@ -41,13 +39,13 @@ public class PricePanel extends Figure implements IWidget {
 	 * 
 	 */
 	public PricePanel(Canvas canvas) {
+		super(canvas);
 		this.model = new PricePanelModel();
 		this.reactor = new DefaultRector(this);
 		p1 = new PriceBid(this); s = new Spread(this);
 		p2 = new PriceAsk(this); c = new Control(this);  
-		add(p1); add(p2); add(c); add(s); this.canvas = canvas;
+		add(p1); add(p2); add(c); add(s); this.adapter = new MouseAdapter();
 		//
-		this.adapter = new MouseAdapter();
 		addMouseListener(adapter); addMouseMotionListener(adapter);
 	}
 	
