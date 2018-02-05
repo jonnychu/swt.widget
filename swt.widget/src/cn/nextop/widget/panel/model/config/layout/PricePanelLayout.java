@@ -8,7 +8,7 @@ import cn.nextop.widget.panel.model.render.PriceAsk;
 import cn.nextop.widget.panel.model.render.PriceBid;
 import cn.nextop.widget.panel.model.render.Spread;
 
-public class DefaultLayout {
+public class PricePanelLayout {
 	
 	/**
 	 * 

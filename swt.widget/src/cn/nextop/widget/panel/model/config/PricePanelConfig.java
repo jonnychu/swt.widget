@@ -1,29 +1,29 @@
 package cn.nextop.widget.panel.model.config;
 
-import cn.nextop.widget.panel.model.config.layout.DefaultLayout;
+import cn.nextop.widget.panel.model.config.layout.PricePanelLayout;
 import cn.nextop.widget.panel.model.config.theme.PricePanelTheme;
 
 public class PricePanelConfig {
 	//
-	protected DefaultLayout layout;
 	protected PricePanelTheme theme;
+	protected PricePanelLayout layout;
 	
 	/**
 	 * 
 	 */
 	public PricePanelConfig() {
-		layout = new DefaultLayout();
 		theme = new PricePanelTheme();
+		layout = new PricePanelLayout();
 	}
 
 	/**
 	 * 
 	 */
-	public DefaultLayout getLayout() {
+	public PricePanelLayout getLayout() {
 		return layout;
 	}
 
-	public void setLayout(DefaultLayout layout) {
+	public void setLayout(PricePanelLayout layout) {
 		this.layout = layout;
 	}
 

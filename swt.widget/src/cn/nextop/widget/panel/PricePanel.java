@@ -25,7 +25,7 @@ import cn.nextop.widget.panel.model.render.Spread;
 /**
  * @author jonny
  */
-public class PricePanel extends Figure implements IWidget{
+public class PricePanel extends Figure implements IWidget {
 	//
 	protected Spread s;
 	protected Control c;

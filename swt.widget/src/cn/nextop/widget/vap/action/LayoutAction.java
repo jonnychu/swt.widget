@@ -1,4 +1,4 @@
-package cn.nextop.widget.panel.action;
+package cn.nextop.widget.vap.action;
 
 import cn.nextop.widget.IWidget;
 import cn.nextop.widget.panel.PricePanel;
