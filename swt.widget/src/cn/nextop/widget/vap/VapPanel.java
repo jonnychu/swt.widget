@@ -7,7 +7,6 @@ import cn.nextop.widget.AbstractWidget;
 
 public class VapPanel extends AbstractWidget {
 	//
-	protected Canvas canvas;
 	protected IReactor reactor;
 	
 	/**
