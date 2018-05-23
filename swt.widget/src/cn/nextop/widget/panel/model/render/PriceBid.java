@@ -32,12 +32,12 @@ public class PriceBid extends Figure {
 		final PricePanelConfig config = model.getConfig();
 		final PricePanelTheme theme = config.getTheme();
 		if(model.isSelect1()) {
-			graphics.setBackgroundColor(theme.getEnterColor());
+			graphics.setBackgroundColor(theme.getColorEnter1());
 			if(model.isPressed1()) {
 				graphics.fillGradient(new Rectangle(x + 1, y + 1, w, h), false);
 			} else {
 				graphics.fillGradient(new Rectangle(x + 1, y + 1, w, h), true);
 			}
-		} else { graphics.setBackgroundColor(theme.getExitColor()); }
+		} else { graphics.setBackgroundColor(theme.getColorPressed1()); }
 	}
 }

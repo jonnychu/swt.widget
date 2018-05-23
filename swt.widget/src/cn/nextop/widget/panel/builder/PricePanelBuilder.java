@@ -32,14 +32,14 @@ public class PricePanelBuilder {
 		final PricePanelModel model = panel.getModel();
 		final PricePanelConfig config = model.getConfig();
 		final PricePanelTheme theme = config.getTheme();
-		theme.setExitColor(color); return this;
+		theme.setColorPressed1(color); return this;
 	}
 	
 	public PricePanelBuilder enterColor(Color color) {
 		final PricePanelModel model = panel.getModel();
 		final PricePanelConfig config = model.getConfig();
 		final PricePanelTheme theme = config.getTheme();
-		theme.setEnterColor(color); return this;
+		theme.setColorEnter1(color); return this;
 	}
 	
 	public PricePanelBuilder addSelectionListener1(Runnable r) {

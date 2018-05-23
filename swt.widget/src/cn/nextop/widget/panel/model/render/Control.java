@@ -19,6 +19,9 @@ import com.patrikdufresne.fontawesome.FontAwesome;
 
 import cn.nextop.support.util.Colors;
 import cn.nextop.widget.panel.PricePanel;
+import cn.nextop.widget.panel.model.PricePanelModel;
+import cn.nextop.widget.panel.model.config.PricePanelConfig;
+import cn.nextop.widget.panel.model.config.theme.PricePanelTheme;
 
 @SuppressWarnings("unused")
 public class Control extends Figure {
@@ -32,7 +35,6 @@ public class Control extends Figure {
 	public Control(PricePanel parent) {
 		this.widgets = new ArrayList<>();
 		setOpaque(true); this.parent = parent;
-
 	}
 	
 	@Override
@@ -90,13 +92,13 @@ public class Control extends Figure {
 			super.paintFigure(graphics); Rectangle rect = getClientArea();
 			final int x = rect.x, y = rect.y, w = rect.width, h = rect.height;
 			//
+			final PricePanelModel model = parent.getModel();
+			final PricePanelConfig config = model.getConfig();
+			final PricePanelTheme theme = config.getTheme();
 			graphics.pushState(); graphics.setFont(this.font);
 			if(enter) {
-				if (pressed) {
-					graphics.setForegroundColor(Colors.COLOR_BLUE);
-				} else {
-					graphics.setForegroundColor(Colors.COLOR_RED);
-				}
+				if (pressed) graphics.setForegroundColor(theme.getColorPressed2());
+				else graphics.setForegroundColor(theme.getColorEnter2());
 			}
 			graphics.drawText(text, x, y); graphics.popState();
 		}
