@@ -6,7 +6,6 @@ import org.eclipse.swt.widgets.Shell;
 
 import com.patrikdufresne.fontawesome.FontAwesome;
 
-import cn.nextop.widget.panel.PricePanel;
 import cn.nextop.widget.panel.builder.PricePanelBuilder;
 import net.miginfocom.swt.MigLayout;
 
@@ -24,9 +23,8 @@ public class PricePanelTest {
 		
 		//
 		PricePanelBuilder builder = new PricePanelBuilder(c);
-		PricePanel panel = builder.addControl(FontAwesome.connectdevelop, this::onSelect1).addControl(FontAwesome.address_book_o, this::onSelect2)
-				.addSelectionListener1(this::onSelected).build();
-		panel.addSelectionListener2(this::onSelected);
+		builder.addControl(FontAwesome.connectdevelop, this::onSelect1).addControl(FontAwesome.address_book_o, this::onSelect2)
+				.addSelectionListener1(this::onSelected).addSelectionListener2(this::onSelected).build();
 		
 		//
 		shell.setSize(500, 300); shell.open();
